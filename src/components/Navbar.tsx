@@ -10,20 +10,20 @@ type NavbarItem = {
 
 const navItems: NavbarItem[] = [
   { label: "Domov", href: "/" },
-  { label: "Produkty", href: "/products" },
-  { label: "Prihlásiť sa", href: "/login" },
+  { label: "Products", href: "/products" },
+  { label: "Login", href: "/login" },
 ];
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
   return (
-    <>
+    <div className="container max-w-screen-desktop min-h-[40px] md:min-h-[70px] flex flex-col items-center justify-between px-5 mx-auto pt-2.5 2xl:px-0">
       <div className="flex flex-wrap w-full">
         <nav className="flex max-w-desktop w-full">
           <ul
             data-test="top-menu"
             id="desktop-nav"
-            className="relative hidden md:flex md:flex-wrap w-full mt-3"
+            className="relative hidden md:flex md:flex-wrap w-full"
           >
             {navItems.map((navbarItem: NavbarItem, index: number) => (
               <li className="group" key={index}>
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
       </div>
-    </>
+    </div>
   );
 };
 

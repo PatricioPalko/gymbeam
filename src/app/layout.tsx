@@ -24,12 +24,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} antialiased`}>
-        <div className="container max-w-screen-desktop min-h-[40px] md:min-h-[70px] flex flex-col items-left justify-between px-5 pt-2.5 2xl:px-0">
+      <body
+        className={`${openSans.variable} min-h-screen flex flex-col`}
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="container max-w-screen-desktop min-h-[40px] md:min-h-[70px] items-center justify-between px-5 mx-auto pt-6 2xl:px-0">
           <Header />
           <Navbar />
         </div>
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>
