@@ -94,7 +94,7 @@ export default async function Products() {
               </p>
               <Link
                 href={"/sign-in"}
-                className="text-white bg-[#ff4410] hover:bg-[#ff4410] focus:ring-4 focus:outline-none focus:ring-red-300 font-medium  text-sm w-full sm:w-100 px-5 py-2.5 text-center dark:bg-[#ff4410] dark:hover:bg-red-600 dark:focus:ring-red-800"
+                className="text-white bg-[#ff4410] hover:bg-[#ff4410] focus:ring-4 focus:outline-none transition focus:ring-red-300 font-bold text-sm w-full px-5 py-2.5 text-center dark:bg-[#ff4410] dark:hover:bg-red-600 dark:focus:ring-red-800"
               >
                 Sign in
               </Link>

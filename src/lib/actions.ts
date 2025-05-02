@@ -1,6 +1,6 @@
-import { schema } from "@/lib/schema";
 import db from "@/lib/db/db";
 import { executeAction } from "@/lib/executeAction";
+import { schema } from "@/lib/schema";
 
 const signUp = async (formData: FormData) => {
   return executeAction({
