@@ -92,7 +92,10 @@ const Page = async () => {
                       <div className="text-center">
                         <button>
                           <Link href="/sign-up">
-                            Don&apos;t have an account? Sign up
+                            Don&apos;t have an account?{" "}
+                            <span className="hover:text-[#ff4410]">
+                              Sign up
+                            </span>
                           </Link>
                         </button>
                       </div>

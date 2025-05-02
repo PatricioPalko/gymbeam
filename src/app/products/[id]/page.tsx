@@ -1,11 +1,15 @@
 import { getProductDetail } from "@/app/helpers/fetch-data";
+import { auth } from "@/lib/auth";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default async function ProductDetail({
   params,
 }: {
   params: { id: number };
 }) {
+  const session = await auth();
+  if (!session) redirect("/sign-in");
   const productId = (await params).id;
   const productDetail = await getProductDetail(productId);
   return (

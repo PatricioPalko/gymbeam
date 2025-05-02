@@ -67,7 +67,7 @@ const Page = async () => {
                       </div>
                       <button
                         type="submit"
-                        className="text-white bg-[#ff4410] hover:bg-[#ff4410] focus:ring-4 focus:outline-none focus:ring-red-300 font-medium  text-sm w-full sm:w-100 px-5 py-2.5 text-center dark:bg-[#ff4410] dark:hover:bg-red-600 dark:focus:ring-red-800"
+                        className="text-white bg-[#ff4410] hover:bg-[#ff4410] focus:ring-4 focus:outline-none focus:ring-red-300 font-medium  text-sm w-full sm:w-100 px-5 py-2.5 text-center dark:bg-[#ff4410] dark:hover:bg-red-600 dark:focus:ring-red-800 cursor-pointer"
                       >
                         Sign up
                       </button>
@@ -76,7 +76,8 @@ const Page = async () => {
                     <div className="text-center mt-4">
                       <button>
                         <Link href="/sign-in">
-                          Already have an account? Sign in
+                          Already have an account?{" "}
+                          <span className="hover:text-[#ff4410]">Sign in</span>
                         </Link>
                       </button>
                     </div>

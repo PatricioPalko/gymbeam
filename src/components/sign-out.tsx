@@ -8,7 +8,10 @@ const SignOut = () => {
 
   return (
     <div className="flex justify-end text-gray-400">
-      <button onClick={handleSignOut} className="hover:text-red-400 uppercase">
+      <button
+        onClick={handleSignOut}
+        className="hover:text-red-400 uppercase cursor-pointer"
+      >
         Sign Out
       </button>
     </div>

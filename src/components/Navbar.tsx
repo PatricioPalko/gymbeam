@@ -11,7 +11,6 @@ type NavbarItem = {
 const navItems: NavbarItem[] = [
   { label: "Domov", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "Login", href: "/sign-in" },
 ];
 
 const Navbar: React.FC = () => {
@@ -33,13 +32,13 @@ const Navbar: React.FC = () => {
                   className={`no-underline leading-[53px] h-full py-4 px-[15px] pl-0`}
                 >
                   <span
-                    className={`text-base font-bold text-left uppercase no-underline lg:text-lg hover:text-[#FF5733] ${
+                    className={`text-base font-bold text-left uppercase no-underline lg:text-lg hover:text-[#ff4410] ${
                       (
                         navbarItem.href === "/"
                           ? pathname === "/"
                           : pathname.startsWith(navbarItem.href)
                       )
-                        ? "text-[#FF5733] transition"
+                        ? "text-[#ff4410] transition"
                         : "text-black"
                     }`}
                   >
