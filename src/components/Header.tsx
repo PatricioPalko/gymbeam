@@ -12,7 +12,7 @@ export default function Header() {
         className="flex h-[40px] md:h-[75px] lg:h-[70px] justify-center md:justify-start"
         data-test="header-gymbeam-logo"
       >
-        <a
+        <Link
           data-testid="link"
           className="h-full"
           title="GymBeam s.r.o."
@@ -26,16 +26,16 @@ export default function Header() {
             height="75"
             decoding="async"
             data-nimg="1"
-            className="h-full w-auto max-w-none"
+            className="h-7 w-auto sm:h-10 object-contain text-left md:h-full md:w-auto max-w-none"
             src="/media/GB_Logo_Energy_SK.webp"
             style={{ color: "transparent" }}
           />
-        </a>
+        </Link>
       </div>
-      <div className="flex items-center justify-end">
+      <div className="flex items-center justify-end ml-4">
         <div className="flex items-center gap-x-3">
           <div className="relative">
-            <div className="hidden md:flex items-center">
+            <div className="flex items-center justify-center">
               <Link
                 href="/sign-in"
                 data-test="login"
@@ -53,7 +53,9 @@ export default function Header() {
                 </svg>
               </Link>
               {session?.user?.email && (
-                <span className="font-medium ml-2">{session?.user?.email}</span>
+                <span className="font-medium ml-2 hidden md:block">
+                  {session?.user?.email}
+                </span>
               )}
             </div>
             {session?.user?.email && <SignOut />}

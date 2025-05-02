@@ -12,7 +12,7 @@ const GoogleSignIn = () => {
     <button
       type="button"
       onClick={handleSignIn}
-      className="group h-12 px-6 border-2 border-gray-300 transition duration-300 hover:border-[#ff4410] focus:bg-blue-50 active:bg-blue-100 my-4"
+      className="group h-10 md:h-12 px-3 md:px-6 border-2 border-gray-300 transition duration-300 hover:border-[#ff4410] focus:bg-blue-50 active:bg-blue-100 my-4"
     >
       <div className="relative flex items-center space-x-4 justify-center">
         <Image src="/media/google.svg" alt="Google" width={30} height={30} />
