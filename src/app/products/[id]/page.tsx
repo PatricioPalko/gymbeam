@@ -6,12 +6,13 @@ import { redirect } from "next/navigation";
 export default async function ProductDetail({
   params,
 }: {
-  params: { id: number };
+  params: Promise<{ id: string }>;
 }) {
   const session = await auth();
   if (!session) redirect("/sign-in");
-  const productId = (await params).id;
-  const productDetail = await getProductDetail(productId);
+  const { id } = await params;
+  const productId = id;
+  const productDetail = await getProductDetail(Number(productId));
   return (
     <div className="bg-white">
       <div className="container max-w-screen-desktop mx-auto px-5 pb-20 2xl:px-0">

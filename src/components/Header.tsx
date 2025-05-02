@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SignOut } from "./SignOut";
 
 export default function Header() {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   return (
     <div className="flex items-center justify-between w-full md:gap-x-10">
       <div
