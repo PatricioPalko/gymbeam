@@ -17,11 +17,12 @@ export const metadata: Metadata = {
   description: "Case Study for GymBeam",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const header = await Header();
   return (
     <html lang="en">
       <body
@@ -29,7 +30,7 @@ export default function RootLayout({
         style={{ minHeight: "100vh" }}
       >
         <div className="container max-w-screen-desktop min-h-[40px] md:min-h-[70px] items-center justify-between px-5 mx-auto pt-6 2xl:px-0">
-          <Header />
+          {header}
           <Navbar />
         </div>
         <main className="flex-1">{children}</main>

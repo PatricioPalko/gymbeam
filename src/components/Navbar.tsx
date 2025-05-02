@@ -11,11 +11,12 @@ type NavbarItem = {
 const navItems: NavbarItem[] = [
   { label: "Domov", href: "/" },
   { label: "Products", href: "/products" },
-  { label: "Login", href: "/login" },
+  { label: "Login", href: "/sign-in" },
 ];
 
 const Navbar: React.FC = () => {
   const pathname = usePathname();
+
   return (
     <div className="container max-w-screen-desktop min-h-[40px] md:min-h-[70px] flex flex-col items-center justify-between px-5 mx-auto pt-2.5 2xl:px-0">
       <div className="flex flex-wrap w-full">
@@ -33,7 +34,11 @@ const Navbar: React.FC = () => {
                 >
                   <span
                     className={`text-base font-bold text-left uppercase no-underline lg:text-lg hover:text-[#FF5733] ${
-                      pathname === navbarItem.href
+                      (
+                        navbarItem.href === "/"
+                          ? pathname === "/"
+                          : pathname.startsWith(navbarItem.href)
+                      )
                         ? "text-[#FF5733] transition"
                         : "text-black"
                     }`}

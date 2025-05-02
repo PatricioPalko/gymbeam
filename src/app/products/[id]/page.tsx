@@ -73,7 +73,7 @@ export default async function ProductDetail({
             >
               <div className="flex">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <div className="-mx-0.5">
+                  <div className="-mx-0.5" key={i}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="1em"
