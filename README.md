@@ -57,6 +57,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Sign in via Google OAuth
+
+To use Google OAuth authentication, you need to create your own OAuth credentials:
+
+- Go to the Google Cloud Console.
+- Create a new project (or use an existing one).
+- Navigate to APIs & Services → Credentials.
+- Click "Create Credentials" → "OAuth 2.0 Client ID".
+- Set the redirect URI to match your development or production URL (e.g., http://localhost:3000/api/auth/callback/google).
+- After creation, copy the Client ID and Client Secret.
+
+Then add these credentials to .evn file:
+
+```
+GOOGLE_CLIENT_ID=your-client-id-here
+GOOGLE_CLIENT_SECRET=your-client-secret-here
+```
+
 ## Built With
 
 - [NextJS](https://nextjs.org/) - The React Framework for the Web
