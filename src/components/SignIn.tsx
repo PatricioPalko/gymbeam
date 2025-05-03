@@ -24,6 +24,7 @@ const SignIn = () => {
     });
 
     if (result?.error) {
+      alert("Invalid credentials");
       console.log("Invalid credentials");
     } else {
       console.log("Successfully signed in");

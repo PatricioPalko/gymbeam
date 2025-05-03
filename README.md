@@ -3,8 +3,11 @@
 GymBeam Case Study project created by Patrik Palko.
 
 ![Laptop mockup](https://github.com/PatricioPalko/gymbeam/blob/main/public/media/laptop_mockup.jpg)
+
 ![Mobile mockup](https://github.com/PatricioPalko/gymbeam/blob/main/public/media/mobile_mockup.jpg)
+
 ![Laptop screenshot](https://github.com/PatricioPalko/gymbeam/blob/main/public/media/laptop_screenshot.png)
+
 ![Mobile screenshot](https://github.com/PatricioPalko/gymbeam/blob/main/public/media/mobile_screenshot.png)
 
 ## Getting Started
@@ -19,13 +22,28 @@ Clone this repository to your computer.
 git clone https://github.com/PatricioPalko/gymbeam.git
 ```
 
-And next type this command to your terminal
+Run the installation of packages:
+
+```bash
+npm install
+# or
+npm i
+```
+
+Create .env file on the root of the project and paste there:
 
 ```
-cd app/
+DATABASE_URL="file:./data/dev.db"
+AUTH_TRUST_HOST=true
 ```
 
-Run the development server:
+Then run command which generates the prisma:
+
+```
+npm run prisma:generate
+```
+
+Finally, run the development server:
 
 ```bash
 npm run dev
@@ -35,14 +53,6 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
-
-Run the installation of packages:
-
-```bash
-npm install
-# or
-npm i
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

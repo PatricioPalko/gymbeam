@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "prisma:generate": "npx auth secret && npx prisma generate && npx prisma migrate dev",
     "db:migrate": "npx prisma migrate dev",
     "db:reset": "prisma migrate reset && prisma migrate dev",
     "db:studio": "prisma studio"
